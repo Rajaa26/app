@@ -1,0 +1,15 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.formatting.provider": "none",
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.linting.banditEnabled": false,
+    "python.analysis.typeCheckingMode": "strict",
+    "cSpell.words": [
+        "fastapi",
+        "pydantic"
+    ],
+    "python.linting.flake8Enabled": true
+}

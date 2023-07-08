@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  app:
+    image: enclaive/python-sgx:latest
+    build: .
+    cap_add:
+      - SYS_PTRACE
+    ports:
+      - "80:80"
+      - "1200:1200"
+    devices:
+      - "/dev/sgx/enclave:/dev/sgx/enclave"
+      - "/dev/sgx/enclave:/dev/sgx_enclave"
+      - "/dev/sgx_provision:/dev/sgx_provision"
+    volumes:
+      - "./data:/data"
+      - "./logs:/app/logs"
